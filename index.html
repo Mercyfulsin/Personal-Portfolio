@@ -1,3 +1,5 @@
+<!-- SmoothScroll & Parallax -->
+
 <!-- Using Materialize -->
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +43,7 @@
         <li><a class="subheader">Subheader</a></li>
         <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
     </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger btn-floating btn-large red"><i class="large material-icons">dehaze</i></a>
+    <a href="#" data-target="slide-out" class="fixed-btn sidenav-trigger btn-floating btn-large red"><i class="large material-icons">dehaze</i></a>
 
 
 
@@ -63,18 +65,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     var elems = document.querySelectorAll('.fixed-action-btn');
-        //     var instances = M.FloatingActionButton.init(elems);
-        // });
-
-        // // Or with jQuery
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems);
         });
         $(document).ready(function () {
             $('.fixed-action-btn').floatingActionButton();
+            $('.fixed-btn').click(function(){
+                console.log("hello");
+                $(this).attr("style","left: 323px;");
+            })
         });
     </script>
 

@@ -1,5 +1,13 @@
 .waves-effect.waves-light-blue .waves-ripple {
     /* The alpha value allows the text and background color
     of the button to still show through. */
-     background-color: rgba(135, 206, 235, 0.65);
-   }
+    background-color: rgba(135, 206, 235, 0.65);
+}
+
+.fixed-btn {
+    position: fixed;
+    left: 23px;
+    top: 23px;
+    margin-bottom: 0;
+    z-index: 997;
+}
