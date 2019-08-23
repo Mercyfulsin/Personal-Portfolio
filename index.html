@@ -20,10 +20,30 @@
 
 <body>
 
+    <div class="container">
+        <a href="#" data-target="slide-out" class="fixed-btn sidenav-trigger btn-floating btn-large red"><i
+                class="large material-icons">dehaze</i></a>
+        <div class="row">
+            <div class="col s12">
+                <div class="parallax">hello</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div style="height: 500px; background-color:black;">TESTINGGGG</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div style="height: 500px; background-color:transparent;">TESTINGGGG</div>
+            </div>
+        </div>
+    </div>
     <!-- <nav> -->
-        <!-- navbar content here  -->
+    <!-- navbar content here  -->
     <!-- </nav> -->
 
+    <!-- SideNavBar -->
     <ul id="slide-out" class="sidenav" style="background-color: #242124;">
         <li>
             <div class="user-view">
@@ -31,22 +51,24 @@
                     <img src="assets/images/java_background.jpg">
                 </div>
                 <a href="#user"><img class="circle" src="assets/images/OldProfile.JPG"></a>
-                <a href="#name"><span style="text-shadow: 2px 2px black;" class="yellow-text name">Andres Ruiz-Velediaz</span></a>
-                <a href="#email"><span style="text-shadow: 2px 2px black;" class="yellow-text email">aruiz858@gmail.com</span></a>
+                <a href="#name"><span style="text-shadow: 2px 2px black;" class="yellow-text name">Andres
+                        Ruiz-Velediaz</span></a>
+                <a href="#email"><span style="text-shadow: 2px 2px black;"
+                        class="yellow-text email">aruiz858@gmail.com</span></a>
             </div>
         </li>
-        <li><a class="orange-text waves-effect waves-orange" href="#!"><i class="orange-text material-icons">assignment_ind</i>About Me</a></li>
-        <li><a class="blue-text waves-effect waves-light-blue" href="#!"><i class="blue-text material-icons">code</i>Portfolio</a></li>
+        <li><a class="orange-text waves-effect waves-orange" href="#!"><i
+                    class="orange-text material-icons">assignment_ind</i>About Me</a></li>
+        <li><a class="blue-text waves-effect waves-light-blue" href="#!"><i
+                    class="blue-text material-icons">code</i>Portfolio</a></li>
         <li>
             <div class="divider"></div>
         </li>
         <li><a class="subheader">Subheader</a></li>
         <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
     </ul>
-    <a href="#" data-target="slide-out" class="fixed-btn sidenav-trigger btn-floating btn-large red"><i class="large material-icons">dehaze</i></a>
 
-
-
+    <!-- Button pop ups -->
     <div class="fixed-action-btn">
         <a class="btn-floating btn-large red waves-effect waves-circle waves-light">
             <i class="large material-icons">mode_edit</i>
@@ -60,6 +82,8 @@
     </div>
 
 
+
+
     <!-- Scripts -->
     <!-- Compiled and minified Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
@@ -71,10 +95,6 @@
         });
         $(document).ready(function () {
             $('.fixed-action-btn').floatingActionButton();
-            $('.fixed-btn').click(function(){
-                console.log("hello");
-                $(this).attr("style","left: 323px;");
-            })
         });
     </script>
 

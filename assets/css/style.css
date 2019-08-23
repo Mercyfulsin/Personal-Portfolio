@@ -11,3 +11,25 @@
     margin-bottom: 0;
     z-index: 997;
 }
+
+body{
+    scroll-behavior: smooth;
+}
+.full{
+    height:100%;
+    background-color: black;
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url("https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/18922075_10209240379473427_3747999831712788946_n.jpg?_nc_cat=103&_nc_oc=AQlZgJlzDVxL-Wa5oSk_8b2MoCHHMV7s_LSj9hbgRIrBd_viEeKMq00cXJqL1Fg2Ais&_nc_ht=scontent-lax3-2.xx&oh=d26497514723ad4690142a6b8a6749d0&oe=5DCD45E8");
+  
+    /* Set a specific height */
+    height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
