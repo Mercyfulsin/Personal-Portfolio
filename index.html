@@ -20,24 +20,38 @@
 
 <body>
 
+    <a href="#" data-target="slide-out" class="fixed-btn sidenav-trigger btn-floating btn-large red"><i
+            class="large material-icons">dehaze</i></a>
+
+
+    <div id="intro" class="section parallax-container scrollspy">
+        <div class="row container center">
+            <h2 class="header" style="margin-top: 150px;">Andres Ruiz-Velediaz</h2>
+            <p class="grey-text text-darken-3 lighten-3">Web Developer who loves to learn and tackle
+                problems.<br><strong>Goal:</strong> Create something that can help society.</p>
+        </div>
+        <div class="parallax"><img style="height:100%;" src="assets/images/intro.jpg">
+        </div>
+    </div>
+
+    
+    <div id="block2" class="section white scrollspy">
+        <div class="row container">
+            <h2 class="header">Parallax</h2>
+            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image
+                in this case, is moved at a different speed than the foreground content while scrolling.</p>
+        </div>
+    </div>
+
+
+    <div id="block3" class="parallax-container scrollspy">
+        <div class="parallax"><img src="https://materializecss.com/images/parallax2.jpg"></div>
+    </div>
+
+
+
     <div class="container">
-        <a href="#" data-target="slide-out" class="fixed-btn sidenav-trigger btn-floating btn-large red"><i
-                class="large material-icons">dehaze</i></a>
-        <div class="row">
-            <div class="col s12">
-                <div class="parallax">hello</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <div style="height: 500px; background-color:black;">TESTINGGGG</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <div style="height: 500px; background-color:transparent;">TESTINGGGG</div>
-            </div>
-        </div>
+
     </div>
     <!-- <nav> -->
     <!-- navbar content here  -->
@@ -74,9 +88,10 @@
             <i class="large material-icons">mode_edit</i>
         </a>
         <ul>
-            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+            <li><a href="#block2" class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+            <li><a href="#block3" class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a>
+            </li>
+            <li><a href="#intro" class="btn-floating green"><i class="material-icons">publish</i></a></li>
             <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
         </ul>
     </div>
@@ -92,6 +107,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems);
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems);
+            var elems = document.querySelectorAll('.scrollspy');
+            console.log(elems);
+            var instances = M.ScrollSpy.init(elems,{
+                scrollOffset: 0
+            });
         });
         $(document).ready(function () {
             $('.fixed-action-btn').floatingActionButton();
