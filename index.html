@@ -33,13 +33,30 @@
         <div class="parallax"><img style="height:100%;" src="assets/images/intro.jpg">
         </div>
     </div>
-
-    
-    <div id="block2" class="section white scrollspy">
+    <div id="block2"  style="background-image: url('assets/images/prism.png');" class="section scrollspy">
         <div class="row container">
-            <h2 class="header">Parallax</h2>
-            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image
-                in this case, is moved at a different speed than the foreground content while scrolling.</p>
+            <div class="col s12">
+                <h2 class="header">About Andres</h2>
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="assets/images/Korea_Me.jpg">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p class="lead">I'm a 25-year old Mexican-American with a passion for learning and
+                                exploring. Enthusiastic
+                                with Japan, I've traveled many times and hope to one day live over there with a job in
+                                the tech
+                                field.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 
@@ -111,7 +128,7 @@
             var instances = M.Parallax.init(elems);
             var elems = document.querySelectorAll('.scrollspy');
             console.log(elems);
-            var instances = M.ScrollSpy.init(elems,{
+            var instances = M.ScrollSpy.init(elems, {
                 scrollOffset: 0
             });
         });
