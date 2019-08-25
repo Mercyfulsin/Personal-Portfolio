@@ -26,9 +26,9 @@
 
 
     <!-- First Parallax Card -->
-    <div id="intro" class="section parallax-container scrollspy">
+    <div id="intro" class="section parallax-container scrollspy valign-wrapper">
         <div class="row container center">
-            <h2 class="header" style="margin-top: 150px;">Andres Ruiz-Velediaz</h2>
+            <h2 class="header">Andres Ruiz-Velediaz</h2>
             <p class="grey-text text-darken-3 lighten-3">Web Developer who loves to learn and tackle
                 problems.<br><strong>Goal:</strong> Create something that can help society.</p>
         </div>
@@ -65,8 +65,8 @@
     </div>
     <!-- Third Parallax Card -->
 
-    <div id="block3" class="parallax-container scrollspy section halign-wrapper">
-        <div class="carousel carousel-slider center">
+    <div id="portfolio" class="parallax-container scrollspy section valign-wrapper">
+        <div style="width: 60%;" class="row carousel carousel-slider center">
             <div class="carousel-fixed-item center middle-indicator">
                 <div class="left">
                     <a href="#!"
@@ -80,21 +80,40 @@
                             class="material-icons right middle-indicator-text">chevron_right</i></a>
                 </div>
             </div>
-            <div class="carousel-item red white-text" href="#one!">
-                <h2>First Panel</h2>
-                <p class="white-text">This is your first panel</p>
+            <div style="background-image: url('assets/images/harrypotter.png'); background-size: 100%;"
+                class="carousel-item white-text" href="#one!">
+                <div style="background-color: rgb(114, 196, 196,0.5)">
+                    <h1>Harry Potter trivia game</h1>
+                    <p>A simple multiple choice trivia game that uses JSON parsing and jQuery for
+                        dynamic changes to the page</p>
+                    <!-- <img src="assets/images/harrypotter.png" height="410px" alt="Trivia Game"> -->
+                </div>
             </div>
-            <div class="carousel-item amber white-text" href="#two!">
-                <h2>Second Panel</h2>
-                <p class="white-text">This is your second panel</p>
+            <div style="background-image: url('assets/images/starwars.png'); background-size: 100%;"
+                class="carousel-item white-text" href="#two!">
+                <div style="background-color: rgb(114, 196, 196,0.5)">
+                    <h1>Star Wars Hangman</h1>
+                    <p class="white-text">Dynamically generates almost all html properties through the use of jQuery.
+                    </p>
+                </div>
             </div>
-            <div class="carousel-item green white-text" href="#three!">
-                <h2>Third Panel</h2>
-                <p class="white-text">This is your third panel</p>
+            <div style="background-image: url('assets/images/giphy.png'); background-size: 100%;"
+                class="carousel-item white-text" href="#three!">
+                <div style="background-color: rgb(114, 196, 196,0.5)">
+                    <h1>Giphy Grabber</h1>
+                    <p>Uses the Giphy API and jQuery to dynamically create cards with GIF's generated
+                        around a search query. The search and buttons persist via localStorage</p>
+                </div>
             </div>
-            <div class="carousel-item blue white-text" href="#four!">
-                <h2>Fourth Panel</h2>
-                <p class="white-text">This is your fourth panel</p>
+            <div style="background-image: url('https://cdn.lynda.com/course/172854/172854-636456678872567319-16x9.jpg'); background-size: 100%;"
+                class="carousel-item white-text" href="#four!">
+                <div style="background-color: rgb(0, 0, 0,0.5)">
+                    <h1>Portfolio Code</h1>
+                    <p>Github repository for old portfolio made completely by hand (no bootstrap). This
+                        was the first project created and submitted to my Web Development Bootcamp at
+                        UCSD.
+                    </p>
+                </div>
             </div>
             <div class="carousel-fixed-item center">
                 <a class="btn waves-effect white grey-text darken-text-2">test</a>
@@ -128,19 +147,22 @@
             </div>
         </li>
         <!-- Menu list -->
+        <li><a class="subheader white-text">Main Menu</a></li>
+        <li><a class="green-text waves-effect waves-green scrollspy sidenav-close" href="#intro"><i
+                    class="orange-text material-icons">home</i>Home</a></li>
         <li><a class="orange-text waves-effect waves-orange scrollspy sidenav-close" href="#about"><i
                     class="orange-text material-icons">assignment_ind</i>About Me</a></li>
-        <li><a class="blue-text waves-effect waves-light-blue" href="#!"><i
+        <li><a class="blue-text waves-effect waves-light-blue scrollspy sidenav-close" href="#portfolio"><i
                     class="blue-text material-icons">code</i>Portfolio</a></li>
         <li>
             <div class="divider"></div>
         </li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+
+        <!-- <li><a class="waves-effect" href="#!">Third Link With Waves</a></li> -->
     </ul>
 
     <!-- Button pop ups -->
-    <div class="fixed-action-btn">
+    <!-- <div class="fixed-action-btn">
         <a class="btn-floating btn-large red waves-effect waves-circle waves-light">
             <i class="large material-icons">mode_edit</i>
         </a>
@@ -151,7 +173,7 @@
             <li><a href="#intro" class="btn-floating green"><i class="material-icons">publish</i></a></li>
             <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
         </ul>
-    </div>
+    </div> -->
 
 
 
