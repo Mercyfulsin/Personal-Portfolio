@@ -12,17 +12,41 @@
     z-index: 997;
 }
 
-body{
+body {
     scroll-behavior: smooth;
 }
-.full{
-    height:100%;
+
+.full {
+    height: 100%;
     background-color: black;
 }
-.parallax-container{
+
+.parallax-container {
     height: 700px;
 }
-a > svg,
-a > i {
-  pointer-events: none;
+
+a>svg, a>i {
+    pointer-events: none;
+}
+
+.middle-indicator {
+    position: absolute;
+    top: 50%;
+}
+
+.middle-indicator-text {
+    font-size: 4.2rem;
+}
+
+a.middle-indicator-text {
+    color: white !important;
+}
+
+.content-indicator {
+    width: 64px;
+    height: 64px;
+    background: none;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
 }

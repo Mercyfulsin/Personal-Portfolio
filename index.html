@@ -53,18 +53,54 @@
                                 field.</p>
                         </div>
                         <div class="card-action">
-                                <a href="#">My Resume</a><a href="https://www.linkedin.com/in/andres-ruiz-velediaz-b571a2188/">My LinkedIn</a>
+                            <a href="#">My Resume</a><a
+                                href="https://www.linkedin.com/in/andres-ruiz-velediaz-b571a2188/">My LinkedIn</a>
                         </div>
                     </div>
                 </div>
-                <div class="parallax"><img style="width: 150%;" src="assets/images/portfolio.jpg">
+                <div class="parallax"><img src="assets/images/japan.jpg">
                 </div>
             </div>
         </div>
     </div>
     <!-- Third Parallax Card -->
-    <div id="block3" class="parallax-container scrollspy">
-        <div class="parallax"><img src="https://materializecss.com/images/parallax2.jpg"></div>
+
+    <div id="block3" class="parallax-container scrollspy section halign-wrapper">
+        <div class="carousel carousel-slider center">
+            <div class="carousel-fixed-item center middle-indicator">
+                <div class="left">
+                    <a href="#!"
+                        class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i
+                            class="material-icons left  middle-indicator-text">chevron_left</i></a>
+                </div>
+
+                <div class="right">
+                    <a href="#!"
+                        class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i
+                            class="material-icons right middle-indicator-text">chevron_right</i></a>
+                </div>
+            </div>
+            <div class="carousel-item red white-text" href="#one!">
+                <h2>First Panel</h2>
+                <p class="white-text">This is your first panel</p>
+            </div>
+            <div class="carousel-item amber white-text" href="#two!">
+                <h2>Second Panel</h2>
+                <p class="white-text">This is your second panel</p>
+            </div>
+            <div class="carousel-item green white-text" href="#three!">
+                <h2>Third Panel</h2>
+                <p class="white-text">This is your third panel</p>
+            </div>
+            <div class="carousel-item blue white-text" href="#four!">
+                <h2>Fourth Panel</h2>
+                <p class="white-text">This is your fourth panel</p>
+            </div>
+            <div class="carousel-fixed-item center">
+                <a class="btn waves-effect white grey-text darken-text-2">test</a>
+            </div>
+        </div>
+        <div class="parallax"><img style="width: 150%;" src="assets/images/portfolio.jpg"></div>
     </div>
 
 
@@ -79,6 +115,7 @@
     <!-- SideNavBar -->
     <ul id="slide-out" class="sidenav" style="background-color: #242124;">
         <li>
+            <!-- Top part of Side Nav -->
             <div class="user-view">
                 <div class="background">
                     <img src="assets/images/java_background.jpg">
@@ -90,6 +127,7 @@
                         class="yellow-text email">aruiz858@gmail.com</span></a>
             </div>
         </li>
+        <!-- Menu list -->
         <li><a class="orange-text waves-effect waves-orange scrollspy sidenav-close" href="#about"><i
                     class="orange-text material-icons">assignment_ind</i>About Me</a></li>
         <li><a class="blue-text waves-effect waves-light-blue" href="#!"><i
@@ -129,12 +167,27 @@
             var elems = document.querySelectorAll('.parallax');
             var instances = M.Parallax.init(elems);
             var elems = document.querySelectorAll('.scrollspy');
-            console.log(elems);
             var instances = M.ScrollSpy.init(elems, {
                 scrollOffset: 0
             });
+            var elems = document.querySelectorAll('.carousel');
+            var instance = M.Carousel.init(elems, {
+                fullWidth: true
+            });
         });
         $(document).ready(function () {
+            $('.moveNextCarousel').click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $('.carousel').carousel('next');
+            });
+
+            // move prev carousel
+            $('.movePrevCarousel').click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $('.carousel').carousel('prev');
+            });
             $('.fixed-action-btn').floatingActionButton();
         });
     </script>
