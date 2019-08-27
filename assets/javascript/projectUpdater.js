@@ -4,34 +4,27 @@ $.ajax({
     url: "https://api.github.com/users/Mercyfulsin/repos",
     method: 'GET'
 }).done(function (reply) {
+    let count = 0;
     reply.forEach(function (content) {
         let raw = `https://raw.githubusercontent.com/Mercyfulsin/${content.name}/master/profile.txt`;
-        verifiedRepo(raw) ? console.log("True") : console.log("False");
+        verifiedRepo(raw, content, count);
+        console.log("Checking " + count);
+        count++
     });
 });
 
-function verifiedRepo(site) {
+function verifiedRepo(site, obj, cnt) {
     $.ajax({
         url: site,
         method: 'GET'
     }).done(function (reply) {
-        return true;
+        repos.push(obj);
+        addContent(reply);
     });
 }
 
-// $.ajax({
-//     url: "https://raw.githubusercontent.com/Mercyfulsin/Word-Guess-Game/master/profile.txt",
-//     method: 'GET',
-//     statusCode: {
-//         404: function () {
-//             alert("page not found");
-//         }
-//     }
-// }).done(function (reply) {
-//     htmlStuff = reply;
-//     addContent();
-// });
-
-function addContent() {
-    $("#Word-Guess-Game").html(htmlStuff);
+function addContent(html) {
+    repos.forEach(function (content) {
+        $("#" + content.name).html(html);
+    });
 }
