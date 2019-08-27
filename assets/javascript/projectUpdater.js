@@ -19,12 +19,10 @@ function verifiedRepo(site, obj, cnt) {
         method: 'GET'
     }).done(function (reply) {
         repos.push(obj);
-        addContent(reply);
+        addContent(reply, obj);
     });
 }
 
-function addContent(html) {
-    repos.forEach(function (content) {
-        $("#" + content.name).html(html);
-    });
+function addContent(html, obj) {
+    $("#" + obj.name).html(html);
 }
