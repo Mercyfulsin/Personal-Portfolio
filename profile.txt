@@ -1,0 +1,5 @@
+<h1>Portfolio Code</h1>
+                    <p>Github repository for old portfolio made completely by hand (no bootstrap). This
+                        was the first project created and submitted to my Web Development Bootcamp at
+                        UCSD.
+                    </p>
