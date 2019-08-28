@@ -66,44 +66,44 @@
     <!-- Third Parallax Card -->
 
     <div id="portfolio" class="parallax-container scrollspy section valign-wrapper">
-        <div style="width: 60%;" class="row carousel carousel-slider center">
+        <div id="carousel-slides" style="width: 60%;" class="row carousel carousel-slider center">
             <div class="carousel-fixed-item center middle-indicator">
                 <div class="left">
                     <a href="#!"
                         class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i
                             class="material-icons left  middle-indicator-text">chevron_left</i></a>
                 </div>
-
                 <div class="right">
                     <a href="#!"
                         class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i
                             class="material-icons right middle-indicator-text">chevron_right</i></a>
                 </div>
             </div>
-            <div style="background-image: url('assets/images/harrypotter.png'); background-position: center;"
-                class="carousel-item white-text" href="#one!">
+
+            <!-- <div style="background-image: url('assets/images/harrypotter.png'); background-position: center;"
+                class="carousel-item white-text">
                 <div id="TriviaGame" style="background-color: rgb(114, 196, 196,0.5)">
                     
                 </div>
             </div>
             <div style="background-image: url('assets/images/starwars.png'); background-position: center;"
-                class="carousel-item white-text" href="#two!">
+                class="carousel-item white-text">
                 <div id="Word-Guess-Game" style="background-color: rgb(114, 196, 196,0.5)">
                     
                 </div>
             </div>
             <div style="background-image: url('assets/images/giphy.png'); background-position: center;"
-                class="carousel-item white-text" href="#three!">
+                class="carousel-item white-text">
                 <div id="giphy-project" style="background-color: rgb(114, 196, 196,0.5)">
                     
                 </div>
             </div>
             <div style="background-image: url('assets/images/profile.png'); background-position: center;"
-                class="carousel-item white-text" href="#four!">
+                class="carousel-item white-text">
                 <div id="Personal-Portfolio" style="background-color: rgb(0, 0, 0,0.5)">
                     
                 </div>
-            </div>
+            </div> -->
             <div class="carousel-fixed-item center">
                 <a class="btn waves-effect white grey-text darken-text-2">test</a>
             </div>
@@ -170,6 +170,7 @@
     <!-- Scripts -->
     <!-- Compiled and minified Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="assets/javascript/projectUpdater.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -181,10 +182,10 @@
             var instances = M.ScrollSpy.init(elems, {
                 scrollOffset: 0
             });
-            var elems = document.querySelectorAll('.carousel');
-            var instance = M.Carousel.init(elems, {
-                fullWidth: true
-            });
+            // var elems = document.querySelectorAll('.carousel');
+            // var instance = M.Carousel.init(elems, {
+            //     fullWidth: true
+            // });
         });
         $(document).ready(function () {
             $('.moveNextCarousel').click(function (e) {
@@ -202,7 +203,6 @@
             $('.fixed-action-btn').floatingActionButton();
         });
     </script>
-    <script src="assets/javascript/projectUpdater.js"></script>
 
 </body>
 
