@@ -30,7 +30,9 @@ function verifiedRepo(site, image, obj, curr, max) {
     }).done(function (reply) {
         repos.push(obj);
         addContent(reply, image, obj);
-        if (curr === max)
+        if (curr === max){
+            attach();
+        }
     });
 }
 
