@@ -32,7 +32,7 @@
             <p class="grey-text text-darken-3 lighten-3">Web Developer who loves to learn and tackle
                 problems.<br><strong>Goal:</strong> Create something that can help society.</p>
         </div>
-        <div class="parallax"><img style="height:100%;" src="assets/images/intro.jpg">
+        <div class="parallax"><img style="width: 100%; position: absolute; right: 0;" src="assets/images/intro.jpg">
         </div>
     </div>
     <!-- Second card -->
@@ -79,46 +79,17 @@
                             class="material-icons right middle-indicator-text">chevron_right</i></a>
                 </div>
             </div>
-
-            <!-- <div style="background-image: url('assets/images/harrypotter.png'); background-position: center;"
-                class="carousel-item white-text">
-                <div id="TriviaGame" style="background-color: rgb(114, 196, 196,0.5)">
-                    
-                </div>
-            </div>
-            <div style="background-image: url('assets/images/starwars.png'); background-position: center;"
-                class="carousel-item white-text">
-                <div id="Word-Guess-Game" style="background-color: rgb(114, 196, 196,0.5)">
-                    
-                </div>
-            </div>
-            <div style="background-image: url('assets/images/giphy.png'); background-position: center;"
-                class="carousel-item white-text">
-                <div id="giphy-project" style="background-color: rgb(114, 196, 196,0.5)">
-                    
-                </div>
-            </div>
-            <div style="background-image: url('assets/images/profile.png'); background-position: center;"
-                class="carousel-item white-text">
-                <div id="Personal-Portfolio" style="background-color: rgb(0, 0, 0,0.5)">
-                    
-                </div>
-            </div> -->
             <div class="carousel-fixed-item center">
-                <a class="btn waves-effect white grey-text darken-text-2">test</a>
+                <div id="code" style="display:inline-block">
+                    <a class="btn waves-effect light-green accent-4 black-text">Code</a>
+                </div>
+                <div id="live" style="display:inline-block">
+                    <a class="btn waves-effect orange darken-3 blac-text">Live</a>
+                </div>
             </div>
         </div>
         <div class="parallax"><img style="width: 150%;" src="assets/images/portfolio.jpg"></div>
     </div>
-
-
-
-    <div class="container">
-
-    </div>
-    <!-- <nav> -->
-    <!-- navbar content here  -->
-    <!-- </nav> -->
 
     <!-- SideNavBar -->
     <ul id="slide-out" class="sidenav" style="background-color: #242124;">
@@ -188,6 +159,14 @@
             // });
         });
         $(document).ready(function () {
+            $('#code').click(function (e) {
+                let link = $('div.active').attr("git-link");
+                window.open(link, '_blank');
+            });
+            $('#live').click(function (e) {
+                let link = $('div.active').attr("pages");
+                window.open(link, '_blank');
+            });
             $('.moveNextCarousel').click(function (e) {
                 e.preventDefault();
                 e.stopPropagation();

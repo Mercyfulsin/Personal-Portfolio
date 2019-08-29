@@ -6,11 +6,11 @@ $.ajax({
     method: 'GET'
 }).then(function (reply) {
     let count = 0;
+    console.log(reply);
     reply.forEach(function (content) {
         let rawText = `https://raw.githubusercontent.com/Mercyfulsin/${content.name}/master/profile.txt`;
         let rawImage = `https://raw.githubusercontent.com/Mercyfulsin/${content.name}/master/profile.png`;
         verifiedRepo(rawText, rawImage, content, count, reply.length - 1);
-        console.log(count, reply.length);
         count++;
     });
 });
@@ -25,9 +25,9 @@ function attach() {
 
 function verifiedRepo(site, image, obj, curr, max) {
     $.ajax({
-        url: site,
+        url: site,  
         method: 'GET'
-    }).done(function (reply) {
+    }).done(function (reply) {  
         repos.push(obj);
         addContent(reply, image, obj);
         if (curr === max){
@@ -38,13 +38,9 @@ function verifiedRepo(site, image, obj, curr, max) {
 
 function addContent(html, image, obj) {
     let container = $("#carousel-slides");
-    console.log(container);
-    let newSlide = $(`<div style="background-image: url('${image}'); background-position: center center; z-index: 0; opacity: 1; visibility: visible; transform: translateX(0px) translateX(0px) translateX(0px) translateZ(0px);" class="carousel-item white-text">`);
-    console.log(newSlide);
+    let newSlide = $(`<div git-link="${obj.html_url}" pages="https://mercyfulsin.github.io/${obj.name}" style="background-image: url('${image}'); background-position: center center; z-index: 0; opacity: 1; visibility: visible; transform: translateX(0px) translateX(0px) translateX(0px) translateZ(0px);" class="carousel-item white-text">`);
     let slideText = $(`<div id="${obj.name}" style="background-color: rgb(114, 196, 196,0.5)">`);
     slideText.html(html);
-    console.log(slideText);
-    console.log(slideText);
     newSlide.append(slideText);
     container.prepend(newSlide);
 }
